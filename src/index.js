@@ -33,12 +33,14 @@ function sassVars (filePath) {
             const localVarName = varValue;
             varValue = getVarValue(localVarName, variables);
 
-			if('value' in varValue){
-				varValue = varValue.value;
-			}
+
 			
             if (!varValue) {
                 message(`Warning: Null value for variable ${localVarName}`);
+            }else{
+                if('value' in varValue){
+                    varValue = varValue.value;
+                }
             }
         }
 

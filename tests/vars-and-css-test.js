@@ -17,28 +17,28 @@ test(TEST_NAME, function (t) {
     );
 
     t.equal(
-        result.color,
+        result.color.value,
         '#fff',
 
         'should get value despite the regular usage'
     );
 
     t.equal(
-        result['color-rgba'],
+        result['color-rgba'].value,
         'rgba(255,255,255,1)',
 
         'should get value despite the usages in @-rule'
     );
 
     t.equal(
-        result.font,
+        result.font.value,
         'Arial, \'Helvetica Neue\', sans-serif',
 
         'should get value despite the nesting'
     );
 
     t.equal(
-        result['font-size'],
+        result['font-size'].value,
         '1.8em',
 
         'should get value despite the vars order in styles'

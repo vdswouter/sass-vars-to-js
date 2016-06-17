@@ -17,56 +17,56 @@ test(TEST_NAME, function (t) {
     );
 
     t.equal(
-        result['color-primary'],
+        result['color-primary'].value,
         '#000',
 
         'should return value of existing variable'
     );
 
     t.equal(
-        result['color-tertiary'],
+        result['color-tertiary'].value,
         null,
 
         'should return null for unknown variable'
     );
 
     t.equal(
-        result['color-accent'],
+        result['color-accent'].value,
         null,
 
         'should return null for later coming variable'
     );
 
     t.equal(
-        result['color-yellow'],
+        result['color-yellow'].value,
         '#ee3',
 
         'should return value for later coming variable'
     );
 
     t.notEqual(
-        result['offset-s'],
+        result['offset-s'].value,
         '10px',
 
         'should not return variable value in expression'
     );
 
     t.equal(
-        result['c'],
+        result['c'].value,
         '100',
 
         'should return deep linked value (1)'
     );
 
     t.equal(
-        result['d'],
+        result['d'].value,
         '100',
 
         'should return deep linked value (2)'
     );
 
     t.equal(
-        result['e'],
+        result['e'].value,
         '100',
 
         'should return deep linked value (3)'
@@ -74,7 +74,7 @@ test(TEST_NAME, function (t) {
 
     // todo: update test
     t.notEqual(
-        result['offset-s'],
+        result['offset-s'].value,
         '5px',
 
         'should not return result of calculation'
@@ -82,7 +82,7 @@ test(TEST_NAME, function (t) {
 
     // todo: update test
     t.notEqual(
-        result['offset-l'],
+        result['offset-l'].value,
         '20px',
 
         'should not return result of calculation'

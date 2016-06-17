@@ -10,7 +10,8 @@
     "precommit": "npm run lint && npm run build && npm test",
     "prepublish": "npm run precommit",
     "lint-tests": "eslint tests/",
-    "lint": "npm run lint-tests"
+    "lint": "npm run lint-tests",
+    "install": "npm run build"
   },
   "repository": {
     "type": "git",

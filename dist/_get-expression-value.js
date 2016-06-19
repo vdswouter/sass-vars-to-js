@@ -39,7 +39,7 @@ function getExpressionValue(varName, scssExpression) {
         return undefined;
     }
 
-    if (! ~scssExpression.indexOf('$')) {
+    if (!~scssExpression.indexOf('$')) {
         (0, _message2.default)('Warning: Check scssExpression to contain valid code');
     }
 
